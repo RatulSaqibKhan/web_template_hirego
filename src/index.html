@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireGO</title>
+  <link rel="stylesheet" href="output.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 grid grid-cols-2 lg:grid-cols-6 items-center">
+      <!-- Logo Section -->
+      <div class="col-span-1 lg:col-span-4 flex items-center space-x-0 lg:space-x-7">
+        <h1 class="text-2xl font-bold">HireGO</h1>
+        <!-- Navigation Section (Hidden on Mobile) -->
+        <nav id="menu" class="hidden lg:flex col-span-4 items-center justify-start space-x-10">
+          <ul class="flex flex-col items-center lg:flex-row lg:space-x-10">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+                <span>Products</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+                <span>Solutions</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+                <span>Why HireGo</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+                <span>Pricing</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+                <span>Resources</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Burger Menu Icon -->
+      <div class="col-span-1 lg:hidden flex justify-end">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <ion-icon name="menu-outline" size="large"></ion-icon>
+        </button>
+      </div>
+
+      <!-- Button Section -->
+      <div class="hidden lg:flex lg:col-span-2 justify-end space-x-4">
+        <button
+          class="border-2 border-black bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white flex flex-row items-center justify-center space-x-2">
+          <ion-icon name="globe-outline"></ion-icon> <span>English</span>
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <button
+          class="border-2 border-black bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white">
+          Login
+        </button>
+        <button
+          class="border-2 border-white bg-black text-white py-2 px-4 rounded-full hover:border-black hover:bg-white hover:text-black">
+          Request a demo
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Initially Hidden) -->
+    <div id="mobile-menu" class="hidden lg:hidden px-4 pb-4">
+      <div class="flex flex-col">
+        <ul class="space-y-4 font-bold text-lg flex flex-col items-center justify-center">
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+              <span>Products</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+              <span>Solutions</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+              <span>Why HireGo</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+              <span>Pricing</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-center space-x-2">
+              <span>Resources</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+        <div class="flex flex-col items-center justify-center space-y-4 mt-2">
+          <button
+            class="border-2 border-black bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white flex flex-row items-center justify-center space-x-2">
+            <ion-icon name="globe-outline"></ion-icon> <span>English</span>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+          <button
+            class="border-2 border-black bg-white text-black py-2 px-4 rounded-full hover:bg-black hover:text-white">
+            Login
+          </button>
+          <button
+            class="border-2 border-white bg-black text-white py-2 px-4 rounded-full hover:border-black hover:bg-white hover:text-black">
+            Request a demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-50 px-4 rounded-b-[40px] pt-20 pb-20">
+    <div class="lg:grid lg:grid-cols-2 md:flex md:flex-col md:justify-center items-center relative space-y-9">
+      <!-- Left Column: Text -->
+      <div class="lg:ml-20 text-center md:text-left lg:space-y-4 md:py-12">
+        <h2 class="text-7xl font-bold">HireGO is your all-in-one Global People Platform</h2>
+        <p class="text-lg text-gray-700 flex flex-row space-x-2 items-center justify-start">
+          <span class="font-bold text-yellow-500"><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+          <span>G3's Leader in global employment platforms</span>
+        </p>
+        <p class="text-lg text-gray-700 flex flex-row space-x-2 items-center justify-start">
+          <span class="font-bold text-yellow-500"><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+          <span>90% customer satisfaction rate</span>
+        </p>
+        <button
+          class="border-2 bg-black text-white text-xl py-4 px-8 rounded-full flex flex-row space-x-2 items-center justify-center hover:bg-white hover:text-black hover:border-black">
+          <span>Request a demo</span>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+
+      <!-- Right Column: Image -->
+      <div class="flex justify-center">
+        <img src="./assets/images/hero.png" alt="Global Workforce Solutions" class="w-full max-w-md md:max-w-none">
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="py-32">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-5xl font-semibold mb-6 text-gray-400">
+        Trusted by <span class="text-black">25,000+</span> companies from startups to enterprise
+      </h3>
+      <div class="grid grid-cols-3 md:grid-cols-7 gap-12 pt-4">
+        <img src="./assets/images/shopify.png" alt="shopify" class="h-7 mx-auto">
+        <img src="./assets/images/klarna.png" alt="klarna" class="h-7 mx-auto">
+        <img src="./assets/images/reddit.png" alt="reddit" class="h-7 mx-auto">
+        <img src="./assets/images/nike.png" alt="nike" class="h-7 mx-auto">
+        <img src="./assets/images/zapier.png" alt="zapier" class="h-7 mx-auto">
+        <img src="./assets/images/nu.png" alt="nu" class="h-7 mx-auto">
+        <img src="./assets/images/felly_belly.png" alt="jelly belly" class="h-7 mx-auto">
+        <img src="./assets/images/revolut.png" alt="revolut" class="h-7 mx-auto">
+        <img src="./assets/images/forever_21.png" alt="forever_21" class="h-7 mx-auto">
+        <img src="./assets/images/redbull.png" alt="redbull" class="h-7 mx-auto">
+        <img src="./assets/images/clavin_klein.png" alt="clavin_klein" class="h-7 mx-auto">
+        <img src="./assets/images/intercom.png" alt="intercom" class="h-7 mx-auto">
+        <img src="./assets/images/hermes.png" alt="hermes" class="h-7 mx-auto">
+        <img src="./assets/images/hello_fresh.png" alt="hello_fresh" class="h-7 mx-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- "You Can Do It All With HireGo" Section -->
+  <section class="py-32 bg-slate-800 rounded-[40px]">
+    <div class="container mx-auto px-4">
+      <!-- Section Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-bold text-slate-100 mb-4">You can do it all. <br> With HireGO.</h2>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-slate-600 p-12 rounded-lg shadow-lg flex flex-col justify-start row-span-2">
+          <div>
+            <h3 class="text-4xl font-bold text-white mb-4">Hire international talent</h3>
+            <p class="text-white mb-6">
+              Instead of setting up your own entities, experience the speed of HireGO’s automated global hiring. Create
+              compliant employment agreements and set up payroll and benefits—in a matter of clicks.
+            </p>
+          </div>
+          <div class="mt-4">
+            <button
+              class="bg-white text-black py-2 px-6 space-x-2 rounded-full flex flex-row items-center justify-center">
+              <span>Hire international talent</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+          <div class="mt-8">
+            <img src="./assets/images/service.png" alt="Global Hiring" class="w-full h-auto object-cover rounded-lg" />
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-green-900 p-12 rounded-lg shadow-lg flex flex-col justify-start">
+          <div>
+            <h3 class="text-4xl font-bold text-white mb-4">Hire contractors</h3>
+            <p class="text-white mb-6">
+              Generate, edit, and sign compliant contracts in minutes and access management tools to streamline
+              paperwork, onboarding, and payments.
+            </p>
+          </div>
+          <div class="mt-4">
+            <button class="bg-white text-black py-2 px-6 space-x-2 rounded-full flex flex-row items-center justify-center">
+              <span>Hire contractors</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-blue-400 p-12 rounded-lg shadow-lg flex flex-col justify-start">
+          <div>
+            <h3 class="text-4xl font-bold text-black mb-4">Convert contractors to employees</h3>
+            <p class="text-black mb-6">
+              Assess global worker misclassification risks and compliantly convert contractors to full-timers, all under one platform.
+            </p>
+          </div>
+          <div class="mt-4">
+            <button class="bg-white text-black py-2 px-6 space-x-2 rounded-full flex flex-row items-center justify-center">
+              <span>Convert contractors</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto py-24">
+      <hr class="text-gray-400">
+    </div>
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-9">
+      <div class="flex flex-col justify-start items-center gap-2">
+        <p class="text-blue-300 font-extrabold text-4xl xl:text-6xl lg:text-5xl md:text-5xl">5,000+</p>
+        <p class="text-white text-xl text-center">Loved by 5,000+ Team Members</p>
+      </div>
+      <div class="flex flex-col justify-start items-center gap-2">
+        <p class="text-blue-300 font-extrabold text-4xl xl:text-6xl lg:text-5xl md:text-5xl">25,000+</p>
+        <p class="text-white text-xl text-center">Trusted by 25,000+ customers</p>
+      </div>
+      <div class="flex flex-col justify-start items-center gap-2">
+        <p class="text-blue-300 font-extrabold text-4xl xl:text-6xl lg:text-5xl md:text-5xl">48 hrs</p>
+        <p class="text-white text-xl text-center">Onboard talent in as little as 48 hours</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold mb-2">Hire International Talent</h4>
+        <p class="text-gray-700">
+          Easily hire international talent with compliant payroll and
+          contracts.
+        </p>
+        <button class="mt-4 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700">
+          Hire International Talent
+        </button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold mb-2">
+          Convert Contractors to Employees
+        </h4>
+        <p class="text-gray-700">
+          Streamline contractor conversions with ready-to-use processes.
+        </p>
+        <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+          Convert Contractors
+        </button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold mb-2">Payroll Software</h4>
+        <p class="text-gray-700">
+          Manage payroll faster and easier than ever before.
+        </p>
+        <button class="mt-4 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 text-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-3xl font-bold">5,000+</h4>
+          <p class="text-gray-600">Levels of Global Talent</p>
+        </div>
+        <div>
+          <h4 class="text-3xl font-bold">25,000+</h4>
+          <p class="text-gray-600">Trusted by Global Customers</p>
+        </div>
+        <div>
+          <h4 class="text-3xl font-bold">48 hrs</h4>
+          <p class="text-gray-600">Onboard Talent Within 48 Hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 HireGO. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+</html>
