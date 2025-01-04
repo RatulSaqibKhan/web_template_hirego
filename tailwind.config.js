@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '425px', // Custom breakpoint for min-width: 425px
+      },
+    },
   },
   corePlugins: {
     aspectRatio: false,
